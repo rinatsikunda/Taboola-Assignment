@@ -1,0 +1,98 @@
+body{
+   background-color:#F8F8F8; 
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 8px;
+}
+header .title{
+    flex:1;
+    text-align: left;
+    font-size: medium;
+    font-weight:bold;
+    
+
+}
+header .disclouser{
+    flex: 2;
+    text-align: right;
+    font-size:12px;
+    font-weight: 300;
+    align-self: center;
+}
+
+.widgetBody{
+
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+/*adjusment for IE*/
+.column-0 {
+    -ms-grid-column: 1; 
+}
+.column-1 {
+    -ms-grid-column: 2;
+}
+.column-2 {
+    -ms-grid-column: 3;
+}
+.row-0 {
+    -ms-grid-row: 1; 
+}
+.row-1 {
+    -ms-grid-row: 2;
+}
+
+.recommendation-item{
+    margin: 10px 8px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer
+}
+.recommendation-item:hover{
+    text-decoration: underline;
+}
+.recommendation-item .thumbnail{
+    width: 100%;
+    height: auto;
+}
+
+.recommendation-item .title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+
+}
+
+.recommendation-item .category{
+    font-size: 16px;
+    margin-top: 4px;
+}
+.recommendation-item .branding{
+    color: grey;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .widgetBody{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  }
