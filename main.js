@@ -23,11 +23,13 @@ function myFunction (json){
                 var item = document.createElement("div");
                 var recommendationHtml = "<img class='thumbnail' src ='' alt='' ><span class='title'></span><span class='category'></span> <span class='branding'></span>";
                 item.innerHTML = recommendationHtml;
-                item.setAttribute("class", "recommendation-item");
-                item.classList.add("column-"+ (i%3));
-                item.classList.add("row-"+ (i%2));
+                item.setAttribute("class", "recommendationItem");
                 item.setAttribute("id", curRecomendation.id);
                 item.setAttribute( "onclick" ,"location.href= " + '"' + decodeURI(curRecomendation.url)+ '"');
+                //add classes for IE css grid adjustments
+                item.classList.add("column-"+ (i%3));
+                item.classList.add("row-"+ (i%2));
+                item.classList.add("m-row-"+ (i));
                 document.getElementsByClassName('widgetBody')[0].appendChild(item);
     
                 //inject all nedded information from current recomendation to the component 

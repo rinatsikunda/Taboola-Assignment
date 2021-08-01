@@ -3,7 +3,6 @@ body{
    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 header{
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 0 8px;
@@ -49,7 +48,7 @@ header .disclouser{
     -ms-grid-row: 2;
 }
 
-.recommendation-item{
+.recommendationItem{
     margin: 10px 8px;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -57,15 +56,15 @@ header .disclouser{
     flex-direction: column;
     cursor: pointer
 }
-.recommendation-item:hover{
+.recommendationItem:hover{
     text-decoration: underline;
 }
-.recommendation-item .thumbnail{
+.recommendationItem .thumbnail{
     width: 100%;
     height: auto;
 }
 
-.recommendation-item .title{
+.recommendationItem .title{
     font-weight: bold;
     font-size: 20px;
     margin-top: 4px;
@@ -74,15 +73,13 @@ header .disclouser{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-
-
 }
 
-.recommendation-item .category{
+.recommendationItem .category{
     font-size: 16px;
     margin-top: 4px;
 }
-.recommendation-item .branding{
+.recommendationItem .branding{
     color: grey;
     font-weight: bold;
     font-size: 18px;
@@ -92,7 +89,36 @@ header .disclouser{
 
 @media only screen and (max-width: 767px) {
     .widgetBody{
-        display: grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
     }
-  }
+    .column-0 {
+        -ms-grid-column: 1; 
+    }
+    .column-1 {
+        -ms-grid-column: 1;
+    }
+    .column-2 {
+        -ms-grid-column: 1;
+    }
+    .m-row-0 {
+        -ms-grid-row: 1; 
+    }
+    .m-row-1 {
+        -ms-grid-row: 2;
+    }
+    .m-row-2 {
+        -ms-grid-row: 3;
+    }
+    .m-row-3 {
+        -ms-grid-row: 4;
+    }
+    .m-row-4 {
+        -ms-grid-row: 5;
+    }
+    .m-row-5 {
+        -ms-grid-row: 6;
+    }
+
+}
