@@ -1,5 +1,4 @@
-"use strict"; 
-var apiUrl = 'https://api.taboola.com/1.2/json/apitestaccount/recommendations.get?app.type=web&app.apikey=7be65fc78e52c11727793f68b06d782cff9ede3c&source.id=%2Fdigiday-publishing-summit%2F&source.url=https%3A%2F%2Fblog.taboola.com%2Fdigiday-publishing-summit%2F&source.type=text&placement.organic-type=mix&placement.visible=true&placement.available=true&placement.rec-count=6&placement.name=Below%20Articl e%20Thumbnails&placement.thumbnail.width=640&placement.thumbnail.height=480&user.session=init'
+ var apiUrl = 'https://api.taboola.com/1.2/json/apitestaccount/recommendations.get?app.type=web&app.apikey=7be65fc78e52c11727793f68b06d782cff9ede3c&source.id=%2Fdigiday-publishing-summit%2F&source.url=https%3A%2F%2Fblog.taboola.com%2Fdigiday-publishing-summit%2F&source.type=text&placement.organic-type=mix&placement.visible=true&placement.available=true&placement.rec-count=6&placement.name=Below%20Articl e%20Thumbnails&placement.thumbnail.width=640&placement.thumbnail.height=480&user.session=init'
 
 document.addEventListener("DOMContentLoaded", function () {
   var xmlhttp = new XMLHttpRequest();
@@ -21,11 +20,11 @@ function myFunction (json){
             if(curRecomendation != null){
                 //for each recommensation on the list - creates new instanse of recommendation-item component and append to the widgetBody div
                 var item = document.createElement("div");
-                var recommendationHtml = "<img class='thumbnail' src ='' alt='' ><span class='title'></span><span class='category'></span> <span class='branding'></span>";
+                var recommendationHtml = "<img class='thumbnail' src ='' alt='' ><div class='title'></div><div class='category'></div><div class='branding'></div>";
                 item.innerHTML = recommendationHtml;
                 item.setAttribute("class", "recommendationItem");
                 item.setAttribute("id", curRecomendation.id);
-                item.setAttribute( "onclick" ,"location.href= " + '"' + decodeURI(curRecomendation.url)+ '"');
+                item.setAttribute( "onclick" ,"window.open( " + '"' + decodeURI(curRecomendation.url)+ '")');
                 //add classes for IE css grid adjustments
                 item.classList.add("column-"+ (i%3));
                 item.classList.add("row-"+ (i%2));

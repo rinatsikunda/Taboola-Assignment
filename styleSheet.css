@@ -1,124 +1,130 @@
 body{
-   background-color:#F8F8F8; 
-   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-header{
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 8px;
-}
-header .title{
-    flex:1;
-    text-align: left;
-    font-size: medium;
-    font-weight:bold;
-    
-
-}
-header .disclouser{
-    flex: 2;
-    text-align: right;
-    font-size:12px;
-    font-weight: 300;
-    align-self: center;
-}
-
-.widgetBody{
-
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-columns: repeat(3, 1fr);
-}
-/*adjusment for IE*/
-.column-0 {
-    -ms-grid-column: 1; 
-}
-.column-1 {
-    -ms-grid-column: 2;
-}
-.column-2 {
-    -ms-grid-column: 3;
-}
-.row-0 {
-    -ms-grid-row: 1; 
-}
-.row-1 {
-    -ms-grid-row: 2;
-}
-
-.recommendationItem{
-    margin: 10px 8px;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer
-}
-.recommendationItem:hover{
-    text-decoration: underline;
-}
-.recommendationItem .thumbnail{
-    width: 100%;
-    height: auto;
-}
-
-.recommendationItem .title{
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 4px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-.recommendationItem .category{
-    font-size: 16px;
-    margin-top: 4px;
-}
-.recommendationItem .branding{
-    color: grey;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 4px;
-}
-
-
-@media only screen and (max-width: 767px) {
-    .widgetBody{
-        -ms-grid-columns: 1fr;
-        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-    }
-    .column-0 {
-        -ms-grid-column: 1; 
-    }
-    .column-1 {
-        -ms-grid-column: 1;
-    }
-    .column-2 {
-        -ms-grid-column: 1;
-    }
-    .m-row-0 {
-        -ms-grid-row: 1; 
-    }
-    .m-row-1 {
-        -ms-grid-row: 2;
-    }
-    .m-row-2 {
-        -ms-grid-row: 3;
-    }
-    .m-row-3 {
-        -ms-grid-row: 4;
-    }
-    .m-row-4 {
-        -ms-grid-row: 5;
-    }
-    .m-row-5 {
-        -ms-grid-row: 6;
-    }
-
-}
+    background-color:#F8F8F8; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ header{
+     display: -ms-flexbox;
+     display: flex;
+     margin: 0 8px;
+ }
+ header .title{
+    -ms-flex: 1;
+     flex:1;
+     text-align: left;
+     font-size: medium;
+     font-weight:bold;
+     
+ 
+ }
+ header .disclouser{
+     -ms-flex: 2;
+     flex: 2;
+     text-align: right;
+     font-size:12px;
+     font-weight: 300;
+     align-self: center;
+     
+ }
+ 
+ .widgetBody{
+     display: -ms-grid;
+     display: grid;
+     -ms-grid-columns: 1fr 1fr 1fr;
+     -ms-grid-rows: 1fr 1fr;
+     grid-template-columns: repeat(3, 1fr);
+ }
+ /*adjusment for IE*/
+ .column-0 {
+     -ms-grid-column: 1; 
+ }
+ .column-1 {
+     -ms-grid-column: 2;
+ }
+ .column-2 {
+     -ms-grid-column: 3;
+ }
+ .row-0 {
+     -ms-grid-row: 1; 
+ }
+ .row-1 {
+     -ms-grid-row: 2;
+ }
+ 
+ .recommendationItem{
+     margin: 10px 8px;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     cursor: pointer
+ }
+ .recommendationItem:hover{
+     text-decoration: underline;
+ }
+ .recommendationItem .thumbnail{
+     width: 100%;
+     height: auto;
+     min-height: 1px; 
+ }
+ 
+ .recommendationItem .title{
+     font-weight: bold;
+     font-size: 20px;
+     margin-top: 4px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;
+     
+     
+ }
+ 
+ .recommendationItem .category{
+     font-size: 16px;
+     margin-top: 4px;
+ }
+ .recommendationItem .branding{
+     color: grey;
+     font-weight: bold;
+     font-size: 18px;
+     margin-top: 4px;
+ }
+ 
+ 
+ @media only screen and (max-width: 767px) {
+     .widgetBody{
+         -ms-grid-columns: 1fr;
+         -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+         grid-template-columns: 1fr;
+     }
+      /*adjusment for IE*/
+     .column-0 {
+         -ms-grid-column: 1; 
+     }
+     .column-1 {
+         -ms-grid-column: 1;
+     }
+     .column-2 {
+         -ms-grid-column: 1;
+     }
+     .m-row-0 {
+         -ms-grid-row: 1; 
+     }
+     .m-row-1 {
+         -ms-grid-row: 2;
+     }
+     .m-row-2 {
+         -ms-grid-row: 3;
+     }
+     .m-row-3 {
+         -ms-grid-row: 4;
+     }
+     .m-row-4 {
+         -ms-grid-row: 5;
+     }
+     .m-row-5 {
+         -ms-grid-row: 6;
+     }
+ 
+ }
